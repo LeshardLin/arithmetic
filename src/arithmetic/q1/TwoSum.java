@@ -16,19 +16,19 @@ import java.util.Arrays;
  * @author LinYan
  * @date 2020/7/27 14:23
  */
-public class Solution {
+public class TwoSum {
 
     public static void main(String[] args) {
         Arrays.stream(twoSum(new int[]{2, 7, 11, 15}, 9))
                 .forEach(number -> System.out.print(number + " "));
     }
 
+    /**
+     * Step1：遍历nums，使nums中元素两两相加求和
+     *
+     * Step2：判断和是否与target相等，如果相等退出循环，输出两数下标
+     */
     public static int[] twoSum(int[] nums, int target) {
-        /**
-         * Step1：遍历nums，使nums中元素两两相加求和
-         *
-         * Step2：判断和是否与target相等，如果相等退出循环，输出两数下标
-         */
         int[] arrayIndex = new int[2];
 
         y:
