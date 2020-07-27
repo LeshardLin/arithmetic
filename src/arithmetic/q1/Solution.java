@@ -24,12 +24,17 @@ public class Solution {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+        /**
+         * Step1：遍历nums，使nums中元素两两相加求和
+         *
+         * Step2：判断和是否与target相等，如果相等退出循环，输出两数下标
+         */
         int[] arrayIndex = new int[2];
 
         y:
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 1; j < nums.length; j++) {
-                if (i != j && nums[i] + nums[j] == target) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
                     arrayIndex[0] = i;
                     arrayIndex[1] = j;
                     break y;
